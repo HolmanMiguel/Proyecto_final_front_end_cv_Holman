@@ -1,0 +1,48 @@
+/*body{height: 100px;}*/
+@media print {
+  html, body {
+    zoom: 89%;
+    height: auto;
+    width:auto;
+    display: block;
+    page-break-inside: avoid;
+    page-break-after: always;
+  }
+  
+  @page {
+    size: 210mm 297mm;
+    margin: 5mm 5mm 5mm 5mm;
+    orphans: 0;
+    widows: 0;
+  }
+
+  .seleccion {
+    zoom:9%;
+  }
+
+  .seleccion:nth-child(even) { 
+    page-break-inside: avoid;
+    page-break-after: always;
+  }
+
+  .tarjeta {
+    background: linear-gradient(180deg, rgb(230, 230, 230), rgb(255, 255, 255));
+    border-radius: 20px;
+    height:auto ;
+    max-width: 50%;
+    padding: 50px;
+    margin: 5px 2px 2px 8px;
+  }
+
+  .contenedor {
+    background: linear-gradient(180deg, rgb(230, 230, 230), rgb(255, 255, 255));
+    margin: 0px 0px 20px 80px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .foto_perfil:hover  
+  {      
+    transform: scale(0.7, 0.7) rotate3d(0);      
+  } 
+}
